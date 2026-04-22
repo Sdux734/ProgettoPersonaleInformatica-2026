@@ -19,9 +19,8 @@ require_once 'includes/functions.php';
             <h1>📚 Benvenuto nella <?php echo SITE_NAME; ?></h1>
             <p>Scopri migliaia di libri e gestisci i tuoi prestiti online</p>
             
-            <button id="book-style-toggle" onclick="toggleBookStyle()">📖 <span>Stile Libro</span></button>
-            
             <?php if (!is_logged_in()): ?>
+
                 <div class="hero-buttons">
                     <a href="auth/login.php" class="btn btn-primary btn-lg">Accedi</a>
                     <a href="auth/register.php" class="btn btn-success btn-lg">Registrati</a>
@@ -61,27 +60,5 @@ require_once 'includes/functions.php';
         </div>
     </div>
     
-    <script>
-        function toggleBookStyle() {
-            document.body.classList.toggle('book-style');
-            const button = document.getElementById('book-style-toggle');
-            if (document.body.classList.contains('book-style')) {
-                button.innerHTML = '🔄 <span>Stile Moderno</span>';
-            } else {
-                button.innerHTML = '📖 <span>Stile Libro</span>';
-            }
-            // Salva la preferenza nel localStorage
-            localStorage.setItem('bookStyle', document.body.classList.contains('book-style'));
-        }
-        
-        // Carica la preferenza al caricamento della pagina
-        document.addEventListener('DOMContentLoaded', function() {
-            const bookStyleEnabled = localStorage.getItem('bookStyle') === 'true';
-            if (bookStyleEnabled) {
-                document.body.classList.add('book-style');
-                document.getElementById('book-style-toggle').innerHTML = '🔄 <span>Stile Moderno</span>';
-            }
-        });
-    </script>
-</body>
-</html>
+    <?php include 'includes/footer.php'; ?>
+

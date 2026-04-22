@@ -10,9 +10,10 @@ require_once '../auth/check_login.php';
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Utente</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <?php include '../includes/header.php'; ?>
 </head>
 <body>
+
     <?php include '../includes/navbar.php'; ?>
     
     <div class="container">

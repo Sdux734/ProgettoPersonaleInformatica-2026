@@ -20,7 +20,8 @@
             
             <span class="user-info">
                 Benvenuto, <?php echo $_SESSION['nome']; ?>!
-                <button id="book-style-toggle" onclick="toggleBookStyle()">📖 Stile Libro</button>
+                <button id="book-style-toggle" onclick="toggleBookStyle()">📖 <span>Stile Libro</span></button>
+
                 <a href="<?php echo SITE_URL; ?>auth/logout.php">Logout</a>
             </span>
         <?php else: ?>

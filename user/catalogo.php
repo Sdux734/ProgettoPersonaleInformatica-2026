@@ -35,9 +35,10 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
 <head>
     <meta charset="UTF-8">
     <title>Catalogo Libri</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <?php include '../includes/header.php'; ?>
 </head>
 <body>
+
     <?php include '../includes/navbar.php'; ?>
     
     <div class="container">
