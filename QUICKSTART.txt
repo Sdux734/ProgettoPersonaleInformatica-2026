@@ -1,0 +1,53 @@
+🚀 INIZIALIZZAZIONE RAPIDA
+
+1️⃣ CREA IL DATABASE
+   - Apri phpMyAdmin (http://localhost/phpmyadmin/)
+   - Nuovo Database: "biblioteca_db"
+   - Importa: database.sql da Progetto/
+
+2️⃣ VERIFICA CONFIGURAZIONE in config/database.php
+   - DB_HOST: localhost ✓
+   - DB_USER: root ✓
+   - DB_PASS: (vuota o tua password) ✓
+   - DB_NAME: biblioteca_db ✓
+
+3️⃣ AVVIA IL SITO
+   - Accedi a: http://localhost/Progetto/
+
+4️⃣ CREDENZIALI DI TEST
+   👤 Admin:
+      Email: admin@biblioteca.it
+      Password: test123456
+   
+   👤 Utente:
+      Email: luca@email.it
+      Password: test123456
+
+📋 CARTELLE IMPORTANTI
+✓ /uploads/copertine/ - Upload immagini (deve essere scrivibile)
+✓ /config/ - Configurazioni database
+✓ /admin/ - Pannello amministrativo
+✓ /user/ - Pagine utente
+✓ /auth/ - Autenticazione
+
+🔑 FUNZIONALITÀ PRINCIPALI
+✅ Registrazione e Login
+✅ Catalogo libri ricercabile
+✅ Richiesta prestiti
+✅ Gestione prestiti admin
+✅ CRUD Libri/Autori/Categorie
+✅ Dashboard admin con statistiche
+✅ Upload immagini copertine
+
+⚠️ NOTA IMPORTANTE
+Nel campo di test "password" usa: test123456
+Le due hash della tua password sono già nel database SQL
+
+🎓 STRUTTURA COMPLETA
+├── Admin Dashboard → Statistics
+├── Gestione Libri → Create/Read/Update/Delete
+├── Gestione Utenti → Modifica/Attivazione
+├── Gestione Prestiti → Monitoraggio
+└── Gestione Autori/Categorie
+
+✨ Pronto per iniziare!
