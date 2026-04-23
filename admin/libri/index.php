@@ -58,8 +58,8 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
             <a href="create.php" class="btn btn-success">+ Aggiungi Libro</a>
             
             <!-- Form di ricerca -->
-            <form method="GET" class="search-form" style="display:inline;">
-                <input type="text" name="search" placeholder="Cerca per titolo o ISBN" value="<?php echo $search; ?>">
+            <form method="GET" class="search-form admin-form" style="display:inline;">
+                <input type="text" name="search" placeholder="Cerca per titolo o ISBN (ricerca in tempo reale)" value="<?php echo $search; ?>">
                 
                 <select name="categoria">
                     <option value="">Tutte le categorie</option>
@@ -70,7 +70,6 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
                     <?php endwhile; ?>
                 </select>
                 
-                <button type="submit" class="btn btn-primary">Cerca</button>
                 <a href="index.php" class="btn btn-secondary">Reset</a>
             </form>
         </div>
