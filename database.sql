@@ -114,7 +114,6 @@ INSERT INTO autori (nome, cognome, nazionalita, data_nascita) VALUES
 ('Italo', 'Calvino', 'Italia', '1923-10-15'),
 ('Haruki', 'Murakami', 'Giappone', '1949-01-12'),
 ('Gabriel', 'García Márquez', 'Colombia', '1927-03-06'),
-('Ursula K.', 'Le Guin', 'USA', '1929-10-21');
 
 
 INSERT INTO libri (titolo, isbn, id_autore, id_categoria, anno_pubblicazione, editore, numero_pagine, descrizione, copertina, copie_totali, copie_disponibili) VALUES
@@ -131,7 +130,6 @@ INSERT INTO libri (titolo, isbn, id_autore, id_categoria, anno_pubblicazione, ed
 ('Il Barone Rampante', '9788806237813', 12, 1, 1957, 'Mondadori', 256, 'Un ragazzo vive sugli alberi per tutta la vita.', 'uploads/copertine/IlBarone.jpg', 3, 3),
 ('1Q84', '9788804627082', 13, 1, 2009, 'Einaudi', 1192, 'Il mondo parallelo di Murakami.', 'uploads/copertine/1Q84.jpg', 2, 2),
 ('Cent\'anni di solitudine', '9788806234638', 14, 1, 1967, 'Mondadori', 417, 'Il capolavoro del realismo magico.', 'uploads/copertine/100Anni.jpg', 4, 4),
-('La mano sinistra delle tenebre', '9788845295079', 15, 2, 1969, 'Fanucci', 304, 'Un capolavoro della fantascienza umanistica.', 'uploads/copertine/LaMano.jpg', 3, 3);
 
 
 -- Aggiornamento copertine per libri esistenti
@@ -148,6 +146,5 @@ UPDATE libri SET copertina = 'uploads/copertine/HarryLaPietraFilosofale.jpg' WHE
 UPDATE libri SET copertina = 'uploads/copertine/IlBarone.jpg' WHERE titolo = 'Il Barone Rampante';
 UPDATE libri SET copertina = 'uploads/copertine/1Q84.jpg' WHERE titolo = '1Q84';
 UPDATE libri SET copertina = 'uploads/copertine/100Anni.jpg' WHERE titolo = 'Cent\'anni di solitudine';
-UPDATE libri SET copertina = 'uploads/copertine/LaMano.jpg' WHERE titolo = 'La mano sinistra delle tenebre';
 
 -- Password di test (test123456): $2y$10$BgoR5kP7d/bcHo/16LrfpO/nv6Q8tM8pOxyZKwgRIebPxlAxJ0J1K

@@ -12,7 +12,7 @@ if (!is_admin()) {
 $stato = $_GET['stato'] ?? '';
 $search = $_GET['search'] ?? '';
 
-$sql = "SELECT p.*, l.titolo, l.isbn, 
+$sql = "SELECT p.*, l.titolo, l.isbn, l.copertina, 
         CONCAT(u.nome, ' ', u.cognome) as utente_nome, u.email
         FROM prestiti p 
         JOIN libri l ON p.id_libro = l.id 
@@ -71,6 +71,7 @@ $conn->query("UPDATE prestiti SET stato = 'scaduto' WHERE stato = 'attivo' AND d
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Copertina</th>
                     <th>Utente</th>
                     <th>Libro</th>
                     <th>Data Prestito</th>
@@ -84,6 +85,14 @@ $conn->query("UPDATE prestiti SET stato = 'scaduto' WHERE stato = 'attivo' AND d
                 <?php while($p = $result->fetch_assoc()): ?>
                     <tr class="<?php echo $p['stato'] == 'scaduto' ? 'row-danger' : ''; ?>">
                         <td><?php echo $p['id']; ?></td>
+                        <td>
+                            <?php if ($p['copertina']): ?>
+                                <img src="../../uploads/copertine/<?php echo $p['copertina']; ?>" 
+                                     alt="Copertina" width="40">
+                            <?php else: ?>
+                                <span>-</span>
+                            <?php endif; ?>
+                        </td>
                         <td>
                             <?php echo $p['utente_nome']; ?><br>
                             <small><?php echo $p['email']; ?></small>
