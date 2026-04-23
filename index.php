@@ -11,6 +11,7 @@ require_once 'includes/functions.php';
     <meta charset="UTF-8">
     <title>Home - <?php echo SITE_NAME; ?></title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/theme-toggle.js"></script>
 </head>
 <body>
     <?php include 'includes/navbar.php'; ?>
@@ -19,6 +20,8 @@ require_once 'includes/functions.php';
         <div class="hero">
             <h1>📚 Benvenuto nella <?php echo SITE_NAME; ?></h1>
             <p>Scopri migliaia di libri e gestisci i tuoi prestiti online</p>
+            
+            <button id="book-style-toggle" onclick="toggleBookStyle()">📖 <span>Stile Libro</span></button>
             
             <?php if (!is_logged_in()): ?>
 
