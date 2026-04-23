@@ -6,7 +6,7 @@ session_start();
 
 // Costanti
 define('SITE_NAME', 'Biblioteca Digitale');
-define('SITE_URL', 'http://localhost/Progetto/');
+define('SITE_URL', 'http://localhost/ProgettoPersonaleInformatica-2026/');
 define('GIORNI_PRESTITO', 14); // Durata prestito in giorni
 define('MAX_PRESTITI_UTENTE', 3); // Max prestiti contemporanei
 
