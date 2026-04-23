@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_FILES['copertina']) && $_FILES['copertina']['error'] == 0) {
         $upload_result = upload_copertina($_FILES['copertina']);
         if ($upload_result['success']) {
-            if ($libro['copertina']) {
+            // Elimina la vecchia copertina solo se è diversa dalla nuova
+            if ($libro['copertina'] && $libro['copertina'] !== $upload_result['filename']) {
                 @unlink("../../uploads/copertine/" . $libro['copertina']);
             }
             $copertina_filename = $upload_result['filename'];
@@ -54,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
         $stmt = $conn->prepare("UPDATE libri SET titolo=?, isbn=?, id_autore=?, id_categoria=?, anno_pubblicazione=?, editore=?, numero_pagine=?, descrizione=?, copertina=?, copie_totali=?, copie_disponibili=? WHERE id=?");
         
-        $stmt->bind_param("ssiisissiii", 
+        $stmt->bind_param("ssiiissssiii", 
             $titolo, 
             $isbn, 
             $id_autore, 
