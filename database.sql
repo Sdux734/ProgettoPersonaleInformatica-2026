@@ -118,20 +118,36 @@ INSERT INTO autori (nome, cognome, nazionalita, data_nascita) VALUES
 
 
 INSERT INTO libri (titolo, isbn, id_autore, id_categoria, anno_pubblicazione, editore, numero_pagine, descrizione, copertina, copie_totali, copie_disponibili) VALUES
-('Fondazione', '9788854120159', 1, 2, 1951, 'Mondadori', 412, 'Un capolavoro della fantascienza che racconta la fondazione di un ampio impero per preservare la civiltà.', 'fondazione.jpg', 3, 3),
-('Il Signore degli Anelli', '9788833570013', 7, 6, 1954, 'Bompiani', 587, 'L\'epica fantasy più celebre di sempre.', 'lotr.jpg', 4, 4),
-('Delitto e Castigo', '9788804742234', 8, 1, 1866, 'Mondadori', 671, 'Uno dei più grandi romanzi psicologici della letteratura.', 'delitto.jpg', 2, 2),
-('Assassinio sull\'Orient Express', '9788845440113', 2, 3, 1934, 'Mondadori', 256, 'Hercule Poirot a bordo di un treno lussuoso con un mistero da risolvere.', 'orient.jpg', 3, 3),
-('Shining', '9788820030116', 3, 2, 1977, 'Sperling & Kupfer', 596, 'Un horror psicologico che lascia senza fiato.', 'shining.jpg', 2, 2),
-('Il codice Da Vinci', '9788830419048', 5, 3, 2003, 'Mondadori', 689, 'Un thriller che ha appassionato milioni di lettori.', 'davinci.jpg', 5, 3),
-('1984', '9788806234621', 9, 1, 1949, 'Mondadori', 423, 'Il romanzo distopico per eccellenza.', '1984.jpg', 4, 4),
-('Orgoglio e Pregiudizio', '9788804685549', 10, 1, 1813, 'Mondadori', 432, 'Un classico dell\'amore e delle convenzioni sociali.', 'orgoglio.jpg', 3, 2),
-('Moby Dick', '9788804742852', 11, 1, 1851, 'Mondadori', 872, 'La grande avventura della balena bianca.', 'moby.jpg', 2, 1),
-('Harry Potter e la Pietra Filosofale', '9788878244867', 6, 6, 1997, 'Salani', 223, 'L\'inizio dell\'epopea del maghetto.', 'harry1.jpg', 6, 5),
-('Il Barone Rampante', '9788806237813', 12, 1, 1957, 'Mondadori', 256, 'Un ragazzo vive sugli alberi per tutta la vita.', 'barone.jpg', 3, 3),
-('1Q84', '9788804627082', 13, 1, 2009, 'Einaudi', 1192, 'Il mondo parallelo di Murakami.', '1q84.jpg', 2, 2),
-('Cent\'anni di solitudine', '9788806234638', 14, 1, 1967, 'Mondadori', 417, 'Il capolavoro del realismo magico.', 'solitudine.jpg', 4, 4),
-('La mano sinistra delle tenebre', '9788845295079', 15, 2, 1969, 'Fanucci', 304, 'Un capolavoro della fantascienza umanistica.', 'tenebre.jpg', 3, 3);
+('Fondazione', '9788854120159', 1, 2, 1951, 'Mondadori', 412, 'Un capolavoro della fantascienza che racconta la fondazione di un ampio impero per preservare la civiltà.', 'uploads/copertine/Fondazione.jpg', 3, 3),
+('Il Signore degli Anelli', '9788833570013', 7, 6, 1954, 'Bompiani', 587, 'L\'epica fantasy più celebre di sempre.', 'uploads/copertine/IlSignore.jpg', 4, 4),
+('Delitto e Castigo', '9788804742234', 8, 1, 1866, 'Mondadori', 671, 'Uno dei più grandi romanzi psicologici della letteratura.', 'uploads/copertine/DelittoeCastigo_.jpg', 2, 2),
+('Assassinio sull\'Orient Express', '9788845440113', 2, 3, 1934, 'Mondadori', 256, 'Hercule Poirot a bordo di un treno lussuoso con un mistero da risolvere.', 'uploads/copertine/OrientExpress_.jpg', 3, 3),
+('Shining', '9788820030116', 3, 2, 1977, 'Sperling & Kupfer', 596, 'Un horror psicologico che lascia senza fiato.', 'uploads/copertine/TheShining.jpg', 2, 2),
+('Il codice Da Vinci', '9788830419048', 5, 3, 2003, 'Mondadori', 689, 'Un thriller che ha appassionato milioni di lettori.', 'uploads/copertine/DaVinci.jpg', 5, 3),
+('1984', '9788806234621', 9, 1, 1949, 'Mondadori', 423, 'Il romanzo distopico per eccellenza.', 'uploads/copertine/1984.jpg', 4, 4),
+('Orgoglio e Pregiudizio', '9788804685549', 10, 1, 1813, 'Mondadori', 432, 'Un classico dell\'amore e delle convenzioni sociali.', 'uploads/copertine/Orgoglio.jpg', 3, 2),
+('Moby Dick', '9788804742852', 11, 1, 1851, 'Mondadori', 872, 'La grande avventura della balena bianca.', 'uploads/copertine/MobyDick.jpg', 2, 1),
+('Harry Potter e la Pietra Filosofale', '9788878244867', 6, 6, 1997, 'Salani', 223, 'L\'inizio dell\'epopea del maghetto.', 'uploads/copertine/HarryLaPietraFilosofale.jpg', 6, 5),
+('Il Barone Rampante', '9788806237813', 12, 1, 1957, 'Mondadori', 256, 'Un ragazzo vive sugli alberi per tutta la vita.', 'uploads/copertine/IlBarone.jpg', 3, 3),
+('1Q84', '9788804627082', 13, 1, 2009, 'Einaudi', 1192, 'Il mondo parallelo di Murakami.', 'uploads/copertine/1Q84.jpg', 2, 2),
+('Cent\'anni di solitudine', '9788806234638', 14, 1, 1967, 'Mondadori', 417, 'Il capolavoro del realismo magico.', 'uploads/copertine/100Anni.jpg', 4, 4),
+('La mano sinistra delle tenebre', '9788845295079', 15, 2, 1969, 'Fanucci', 304, 'Un capolavoro della fantascienza umanistica.', 'uploads/copertine/LaMano.jpg', 3, 3);
 
+
+-- Aggiornamento copertine per libri esistenti
+UPDATE libri SET copertina = 'uploads/copertine/Fondazione.jpg' WHERE titolo = 'Fondazione';
+UPDATE libri SET copertina = 'uploads/copertine/IlSignore.jpg' WHERE titolo = 'Il Signore degli Anelli';
+UPDATE libri SET copertina = 'uploads/copertine/DelittoeCastigo_.jpg' WHERE titolo = 'Delitto e Castigo';
+UPDATE libri SET copertina = 'uploads/copertine/OrientExpress_.jpg' WHERE titolo = 'Assassinio sull\'Orient Express';
+UPDATE libri SET copertina = 'uploads/copertine/TheShining.jpg' WHERE titolo = 'Shining';
+UPDATE libri SET copertina = 'uploads/copertine/DaVinci.jpg' WHERE titolo = 'Il codice Da Vinci';
+UPDATE libri SET copertina = 'uploads/copertine/1984.jpg' WHERE titolo = '1984';
+UPDATE libri SET copertina = 'uploads/copertine/Orgoglio.jpg' WHERE titolo = 'Orgoglio e Pregiudizio';
+UPDATE libri SET copertina = 'uploads/copertine/MobyDick.jpg' WHERE titolo = 'Moby Dick';
+UPDATE libri SET copertina = 'uploads/copertine/HarryLaPietraFilosofale.jpg' WHERE titolo = 'Harry Potter e la Pietra Filosofale';
+UPDATE libri SET copertina = 'uploads/copertine/IlBarone.jpg' WHERE titolo = 'Il Barone Rampante';
+UPDATE libri SET copertina = 'uploads/copertine/1Q84.jpg' WHERE titolo = '1Q84';
+UPDATE libri SET copertina = 'uploads/copertine/100Anni.jpg' WHERE titolo = 'Cent\'anni di solitudine';
+UPDATE libri SET copertina = 'uploads/copertine/LaMano.jpg' WHERE titolo = 'La mano sinistra delle tenebre';
 
 -- Password di test (test123456): $2y$10$BgoR5kP7d/bcHo/16LrfpO/nv6Q8tM8pOxyZKwgRIebPxlAxJ0J1K
