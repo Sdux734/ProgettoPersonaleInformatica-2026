@@ -64,7 +64,8 @@ function is_prestito_scaduto($data_scadenza) {
 function upload_copertina($file) {
     $target_dir = __DIR__ . '/../uploads/copertine/';
     $file_extension = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
-    $new_filename = uniqid() . '.' . $file_extension;
+    $original_filename = pathinfo($file["name"], PATHINFO_FILENAME);
+    $new_filename = $original_filename . '_' . uniqid() . '.' . $file_extension;
     $target_file = $target_dir . $new_filename;
     
     // Verifica tipo file
@@ -81,6 +82,20 @@ function upload_copertina($file) {
     // Crea la cartella se non esiste
     if (!is_dir($target_dir)) {
         mkdir($target_dir, 0755, true);
+    }
+    
+    // Verifica se il file esiste già (basato sul nome originale)
+    $base_filename = $original_filename . '.' . $file_extension;
+    $existing_file = $target_dir . $base_filename;
+    if (file_exists($existing_file)) {
+        return ['success' => true, 'filename' => $base_filename];
+    }
+    
+    // Verifica anche versioni con timestamp (formato precedente)
+    $files = glob($target_dir . $original_filename . '_*.' . $file_extension);
+    if (!empty($files)) {
+        $existing = basename($files[0]);
+        return ['success' => true, 'filename' => $existing];
     }
     
     // Upload

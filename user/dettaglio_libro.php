@@ -45,8 +45,9 @@ $puo_richiedere = !$prestito_attivo &&
     <title><?php echo $libro['titolo']; ?></title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/theme-toggle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="book-style">
     <?php include '../includes/navbar.php'; ?>
     
     <div class="container">
@@ -60,22 +61,22 @@ $puo_richiedere = !$prestito_attivo &&
             </div>
             
             <div class="book-info">
-                <h1><?php echo $libro['titolo']; ?></h1>
-                <h2><?php echo ($libro['autore_cognome'] ?? 'Unknown') . ' ' . ($libro['autore_nome'] ?? ''); ?></h2>
+                <h1><?php echo htmlspecialchars($libro['titolo']); ?></h1>
+                <h2>di <?php echo htmlspecialchars(($libro['autore_cognome'] ?? '') . ' ' . ($libro['autore_nome'] ?? '')); ?></h2>
                 
                 <div class="details">
-                    <p><strong>ISBN:</strong> <?php echo $libro['isbn']; ?></p>
-                    <p><strong>Categoria:</strong> <?php echo $libro['categoria_nome'] ?? 'N/A'; ?></p>
-                    <p><strong>Anno:</strong> <?php echo $libro['anno_pubblicazione'] ?? 'N/A'; ?></p>
-                    <p><strong>Editore:</strong> <?php echo $libro['editore'] ?? 'N/A'; ?></p>
-                    <p><strong>Pagine:</strong> <?php echo $libro['numero_pagine'] ?? 'N/A'; ?></p>
-                    <p><strong>Copie disponibili:</strong> <?php echo $libro['copie_disponibili']; ?></p>
+                    <p><strong>ISBN:</strong> <span><?php echo htmlspecialchars($libro['isbn']); ?></span></p>
+                    <p><strong>Categoria:</strong> <span><?php echo htmlspecialchars($libro['categoria_nome'] ?? 'N/A'); ?></span></p>
+                    <p><strong>Anno:</strong> <span><?php echo htmlspecialchars($libro['anno_pubblicazione'] ?? 'N/A'); ?></span></p>
+                    <p><strong>Editore:</strong> <span><?php echo htmlspecialchars($libro['editore'] ?? 'N/A'); ?></span></p>
+                    <p><strong>Pagine:</strong> <span><?php echo htmlspecialchars($libro['numero_pagine'] ?? 'N/A'); ?></span></p>
+                    <p><strong>Disponibilità:</strong> <span><?php echo $libro['copie_disponibili']; ?> / <?php echo $libro['copie_totali']; ?> copie</span></p>
                 </div>
                 
                 <?php if ($libro['descrizione']): ?>
                     <div class="description">
-                        <h3>Descrizione</h3>
-                        <p><?php echo nl2br($libro['descrizione']); ?></p>
+                        <h3>Sinossi</h3>
+                        <p><?php echo nl2br(htmlspecialchars($libro['descrizione'])); ?></p>
                     </div>
                 <?php endif; ?>
                 
@@ -84,7 +85,7 @@ $puo_richiedere = !$prestito_attivo &&
                         <a href="richiedi_prestito.php?id=<?php echo $libro['id']; ?>" 
                            class="btn btn-success"
                            onclick="return confirm('Vuoi richiedere il prestito di questo libro?')">
-                            ✓ Richiedi Prestito
+                            📚 Richiedi Prestito
                         </a>
                     <?php elseif ($prestito_attivo): ?>
                         <span class="badge badge-warning">⚠ Hai già questo libro in prestito</span>
@@ -99,5 +100,7 @@ $puo_richiedere = !$prestito_attivo &&
             </div>
         </div>
     </div>
+    
+    <?php include '../includes/footer.php'; ?>
 </body>
 </html>
