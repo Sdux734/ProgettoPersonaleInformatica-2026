@@ -34,3 +34,5 @@ try {
     redirect('miei_prestiti.php', 'Errore durante la restituzione', 'error');
 }
 ?>
+
+

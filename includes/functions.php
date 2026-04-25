@@ -107,3 +107,6 @@ function upload_copertina($file) {
 }
 
 ?>
+
+
+

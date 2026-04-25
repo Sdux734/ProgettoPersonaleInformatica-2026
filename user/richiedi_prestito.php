@@ -62,3 +62,6 @@ try {
     redirect('catalogo.php', 'Errore durante la richiesta del prestito', 'error');
 }
 ?>
+
+
+

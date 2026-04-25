@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="navbar-brand">
-        <a href="<?php echo SITE_URL; ?>index.php" style="font-weight: bold; font-size: 18px;">📚 <?php echo SITE_NAME; ?></a>
+        <a href="<?php echo SITE_URL; ?>index.php" style="font-weight: bold; font-size: 18px;"><?php echo SITE_NAME; ?></a>
     </div>
     
     <div class="navbar-menu">
@@ -20,7 +20,7 @@
             
             <span class="user-info">
                 Benvenuto, <?php echo $_SESSION['nome']; ?>!
-                <button id="book-style-toggle" onclick="toggleBookStyle()">📖 <span>Stile Libro</span></button>
+                <button id="book-style-toggle" onclick="toggleBookStyle()"><span>📖 Stile Libro</span></button>
 
                 <a href="<?php echo SITE_URL; ?>auth/logout.php">Logout</a>
             </span>
@@ -30,3 +30,6 @@
         <?php endif; ?>
     </div>
 </nav>
+
+
+

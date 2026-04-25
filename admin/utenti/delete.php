@@ -25,3 +25,6 @@ if ($stmt->execute()) {
     redirect('index.php', 'Errore durante l\'eliminazione', 'error');
 }
 ?>
+
+
+

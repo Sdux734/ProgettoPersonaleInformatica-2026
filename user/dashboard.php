@@ -23,13 +23,13 @@ require_once '../auth/check_login.php';
         
         <div class="dashboard-grid">
             <div class="card">
-                <h2>📚 Catalogo</h2>
+                <h2>Catalogo</h2>
                 <p>Sfoglia e cerca i libri disponibili nella biblioteca</p>
                 <a href="catalogo.php" class="btn btn-primary">Vai al Catalogo</a>
             </div>
             
             <div class="card">
-                <h2>📖 I Miei Prestiti</h2>
+                <h2>I Miei Prestiti</h2>
                 <p>Visualizza lo stato dei tuoi prestiti attuali e passati</p>
                 <a href="miei_prestiti.php" class="btn btn-primary">I Miei Prestiti</a>
             </div>
@@ -43,3 +43,6 @@ require_once '../auth/check_login.php';
     </div>
 </body>
 </html>
+
+
+

@@ -16,9 +16,6 @@ Thumbs.db
 # Logs
 *.log
 
-# Uploads (keep directory but not files)
-uploads/copertine/*
-!uploads/copertine/.gitkeep
 
 # Database backups
 *.bak

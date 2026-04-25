@@ -43,6 +43,10 @@ $puo_richiedere = !$prestito_attivo &&
 <head>
     <meta charset="UTF-8">
     <title><?php echo $libro['titolo']; ?></title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/theme-toggle.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -56,7 +60,7 @@ $puo_richiedere = !$prestito_attivo &&
                 <?php if ($libro['copertina']): ?>
                     <img src="../uploads/copertine/<?php echo $libro['copertina']; ?>" alt="Copertina">
                 <?php else: ?>
-                    <div class="no-image-large">📖</div>
+                    <div class="no-image-large"></div>
                 <?php endif; ?>
             </div>
             
@@ -85,14 +89,14 @@ $puo_richiedere = !$prestito_attivo &&
                         <a href="richiedi_prestito.php?id=<?php echo $libro['id']; ?>" 
                            class="btn btn-success"
                            onclick="return confirm('Vuoi richiedere il prestito di questo libro?')">
-                            📚 Richiedi Prestito
+                            Richiedi Prestito
                         </a>
                     <?php elseif ($prestito_attivo): ?>
-                        <span class="badge badge-warning">⚠ Hai già questo libro in prestito</span>
+                        <span class="badge badge-warning">Hai già questo libro in prestito</span>
                     <?php elseif ($libro['copie_disponibili'] == 0): ?>
                         <span class="badge badge-danger">✕ Non disponibile</span>
                     <?php elseif ($prestiti_count >= MAX_PRESTITI_UTENTE): ?>
-                        <span class="badge badge-warning">⚠ Limite di prestiti raggiunto</span>
+                        <span class="badge badge-warning">Limite di prestiti raggiunto</span>
                     <?php endif; ?>
                     
                     <a href="catalogo.php" class="btn btn-secondary">← Torna al catalogo</a>
@@ -104,3 +108,6 @@ $puo_richiedere = !$prestito_attivo &&
     <?php include '../includes/footer.php'; ?>
 </body>
 </html>
+
+
+

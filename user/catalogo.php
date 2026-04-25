@@ -54,7 +54,7 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
                         <?php if ($libro['copertina']): ?>
                             <img src="../uploads/copertine/<?php echo $libro['copertina']; ?>" alt="Copertina">
                         <?php else: ?>
-                            <div class="no-image">📖 Nessuna immagine</div>
+                            <div class="no-image">Nessuna immagine</div>
                         <?php endif; ?>
                         
                         <h3><?php echo substr($libro['titolo'], 0, 50); ?></h3>
@@ -72,3 +72,6 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
     </div>
 </body>
 </html>
+
+
+

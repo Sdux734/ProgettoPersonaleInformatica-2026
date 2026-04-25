@@ -43,6 +43,10 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
 <head>
     <meta charset="UTF-8">
     <title>Gestione Libri - Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/theme-toggle.js"></script>
 </head>
@@ -123,3 +127,6 @@ $categorie = $conn->query("SELECT * FROM categorie ORDER BY nome");
     </div>
 </body>
 </html>
+
+
+
